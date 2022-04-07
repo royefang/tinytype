@@ -1,0 +1,16 @@
+body{
+
+    padding:20%;
+}
+
+span{
+    white-space:pre-wrap;
+}
+
+.outputArea{
+    /* display: inline-block; */
+    padding: 1em;
+    border: solid pink;
+}
+
+
