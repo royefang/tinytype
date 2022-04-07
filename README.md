@@ -1,6 +1,6 @@
 # TinyType
 
-4cm^2 keyboard
+Simple 2cm * 2cm keyboard
 
 ## Usage
 ```

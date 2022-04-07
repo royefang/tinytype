@@ -1,11 +1,10 @@
 body{
-
-    padding:20%;
+    padding: 5% 15%; 
 }
 
-span{
-    white-space:pre-wrap;
-}
+/* span{
+    white-space: pre-wrap;
+} */
 
 .outputArea{
     /* display: inline-block; */
@@ -13,4 +12,17 @@ span{
     border: solid pink;
 }
 
+.inputArea{
+    display: block;
+    /* justify-content: space-around; */
+}
 
+button{
+    white-space: pre;
+    height: 1.75em;
+    width: 1.75em;    
+    /* letter-spacing: 0.15em; */
+    text-align: center;
+    padding: 0;
+    /* margin: auto; */
+}

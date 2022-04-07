@@ -1,22 +1,36 @@
-// TODO: capitalize
-// TODO: research swiping with jquery
+
+// disable jquery mobile loading text
+$.mobile.loading().hide();
+
+// onScreentext box
+onScreenText = '';
 
 // get list of buttons
 var allInputKeys = document.getElementsByClassName("inputKey");
-onScreenText = '';
 
 // create event listener function to print button text
-var printText = function() {
+var printText = function(e) {
 
-	onScreenText += this.innerHTML;
+	// right click
+	if(e.type === 'contextmenu'){
+		e.preventDefault();
+		onScreenText += this.innerHTML[1];
+	}
+
+	// left click
+	else {
+		onScreenText += this.innerHTML[0];
+	}
+	
 	console.log(onScreenText);
-	console.log('this is the last char: ' + onScreenText.charAt(onScreenText.length - 1))
+	// console.log('this is the last char: ' + onScreenText.charAt(onScreenText.length - 1))
 	document.getElementById("outputText").innerHTML = onScreenText;
 };
 
 // each input key has an event listener that executes the above function
 for (var i = 0; i < allInputKeys.length; i++) {
 	allInputKeys[i].addEventListener('click', printText, false);
+	allInputKeys[i].addEventListener('contextmenu', printText, false);
 }
 
 // Event listener for single click backspace
@@ -55,7 +69,6 @@ document.getElementById('backspace').addEventListener('mouseup', function() {
 	clearTimeout(timeout);
 	mouseIsDown = false;
 })
-
 //
 
 // event listener for space //
@@ -81,4 +94,46 @@ setInterval(() => {
 }, interval);
 //
 
+// swipe left for letter on the left // 
+$('.inputKey').on('swipeleft', function() {
+	onScreenText += this.innerHTML[0];
+	console.log(onScreenText);
+	// console.log('this is the last char: ' + onScreenText.charAt(onScreenText.length - 1))
+	document.getElementById("outputText").innerHTML = onScreenText;
+})
+// 
 
+// swipe right for letter on the right //
+$('.inputKey').on('swiperight', function() {
+	onScreenText += this.innerHTML[1];
+	console.log(onScreenText);
+	// console.log('this is the last char: ' + onScreenText.charAt(onScreenText.length - 1))
+	document.getElementById("outputText").innerHTML = onScreenText;
+})
+//
+
+var upperCase = false;
+// Event listener for caps lock //
+document.getElementById('caps').addEventListener('click', function() {
+
+	// currently lowercase
+	if(upperCase == false) {
+		
+		// loop through each key and convert to uppercase
+		Object.keys(allInputKeys).forEach(function(i) {
+			allInputKeys[i].innerHTML = allInputKeys[i].innerHTML.toUpperCase();
+		});
+		upperCase = true;
+	}
+
+	// currently uppercase
+	else {
+
+		// loop through each key and convert to lowercase
+		Object.keys(allInputKeys).forEach(function(i) {
+			allInputKeys[i].innerHTML = allInputKeys[i].innerHTML.toLowerCase();
+		});
+		upperCase = false;
+	}
+})
+//

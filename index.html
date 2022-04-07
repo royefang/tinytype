@@ -1,60 +1,61 @@
+<!DOCTYPE html>
 <html>
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TinyType</title>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
 </head>
 
 <body>
-    <!-- css -->
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="//code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
-    <link rel="stylesheet" href="styles.css">
 
-    <!-- overall ui layout -->
-    <h4>TinyType</h4>
-    <button class="inputKey" id="1">1</button>
-    <button class="inputKey" id="2">2</button>
-    <button class="inputKey" id="3">3</button>
-    <br>
-    <button class="inputKey" id="4">4</button>
-    <button class="inputKey" id="5">5</button>
-    <button class="inputKey" id="6">6</button>
-    <br>
-    <button class="backspace" id="backspace">B</button>
-    <button class="space" id="space">S</button>
-    <button class="inputKey" id="9">9</button>
-    <br><br>
+    <div class="inputArea">
+        <!-- overall ui layout -->
+        <h1>TinyType</h1>
+        <button class="inputKey">ab</button><!--
+        --><button class="inputKey">cd</button><!--
+        --><button class="inputKey">ef</button><!--
+        --><button class="inputKey">gh</button>
+        <br>
+        <button class="inputKey">ij</button><!--
+        --><button class="inputKey">kl</button><!--
+        --><button class="inputKey">mn</button><!--
+        --><button class="inputKey">op</button>
+        <br>
+        <button class="inputKey">qr</button><!--
+        --><button class="inputKey">st</button><!--
+        --><button class="inputKey">uv</button><!--
+        --><button class="inputKey">wx</button>
+        <br>
+        <button class="inputKey" >yz</button><!--
+        --><button id="caps">C</button><!--
+        --><button id="space">S</button><!--
+        --><button id="backspace">B</button>
+        <br><br>
+    </div>
 
     <div class="outputArea">
         <span id="outputText"></span><!--
         --><span id="cursor">_</span>
     </div>
 
+    <div class="usage">
+        <h2>Usage</h2>
+        <p>- Left click to invoke the left letter</p>
+        <p>- Right click to invoke the right letter</p>
+        <p>- A regular click with invoke the left letter</p>
+        <p>- (C)aps Lock to toggle capitalization</p>
+        <p>- (S)pace to enter a space</p>
+        <p>- (B)ackspace to delete individual letters, hold to delete all text</p>
+    </div>
 
+    <script type="text/javascript" src="scripts.js"></script>
 
-
-    <!-- <table>
-        <tr>
-            <td>
-                <div id='divList'></div>
-            </td>
-        </tr>
-    </table> -->
-
-    <!-- jquery -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-3.1.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
-    <!-- 3rd party libs -->
-    <script type="text/javascript" src="lib/yaml.min.js"></script>
-
-    <!-- my own code -->
-
-    <script type="text/javascript" src="src/tinytype.js"></script>
-
-    <!-- <script type="text/javascript" src="src/toodoo.main.js"></script>
-    <script type="text/javascript" src="src/toodoo.item.js"></script> -->
 </body>
 
 </html>
