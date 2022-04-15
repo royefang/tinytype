@@ -19,10 +19,11 @@ body{
 
 button{
     white-space: pre;
-    height: 1.75em;
-    width: 1.75em;    
+    height: 0.5cm; /* 4 buttons * 0.5cm = 2cm */
+    width: 0.5cm; /* 4 buttons * 0.5cm = 2cm */
     /* letter-spacing: 0.15em; */
     text-align: center;
     padding: 0;
     /* margin: auto; */
+    font-size: 0.75em;
 }
