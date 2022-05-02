@@ -6,6 +6,9 @@
     <title>TinyType</title>
     <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+    
+
     <link rel="stylesheet" href="styles.css">
     <!-- <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -33,10 +36,37 @@
         --><button class="inputKey">wx</button>
         <br>
         <button class="inputKey" >yz</button><!--
-        --><button id="caps">C</button><!--
-        --><button id="space">S</button><!--
-        --><button id="backspace">B</button>
-        <br><br>
+        --><button class="optionKey" id="caps">C</button><!--
+        --><button class="optionKey" id="space">S</button><!--
+        --><button class="optionKey" id="backspace">B</button>
+    </div>
+
+	<div>
+		<br>
+		<button id="emoji">E</button>
+		<br><br>
+	</div>
+
+
+    <div>
+
+        <table id="tbMain">
+          <tbody>
+            <tr id="trToolbar">
+              <td></td>
+            </tr>
+            <tr id="trCanvas">
+              <td>
+                <canvas id="cvsMain"></canvas>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    
+        <script type="text/javascript" src="./lib/jquery.min.js"></script>
+        <script type="text/javascript" src="./lib/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="./lib/yaml.min.js"></script>
+        <!-- <script type="text/javascript" src="./src/emoji.js"></script> -->
     </div>
 
     <div class="outputArea">
@@ -51,9 +81,14 @@
         <p>- (C)aps Lock to toggle capitalization</p>
         <p>- (S)pace to enter a space</p>
         <p>- (B)ackspace to delete individual letters, hold to delete all text</p>
+        <p>- (E)moji keyboard toggle</p>
+    </div>
+    <div>
+      <img id="strokes" style="width:50%" src="strokes.jpg">
     </div>
 
-    <script type="text/javascript" src="scripts.js"></script>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script type="text/javascript" src="./src/scripts.js"></script>
 
 </body>
 

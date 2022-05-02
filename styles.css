@@ -27,3 +27,8 @@ button{
     /* margin: auto; */
     font-size: 0.75em;
 }
+
+#strokes{
+    width:50%;
+    height:50%;
+}
